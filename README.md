@@ -6,6 +6,8 @@
 
 This contains everything you need to run your app locally.
 
+https://openai-chat-720476896821.us-west1.run.app
+
 View your app in AI Studio: https://ai.studio/apps/drive/1DoL4eDQpKXb6REzGNVItBjGF3sUJ_COn
 
 ## Run Locally
