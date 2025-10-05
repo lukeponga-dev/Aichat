@@ -7,6 +7,7 @@ import {GoogleGenAI} from '@google/genai';
 
 const ai = new GoogleGenAI({apiKey: process.env.API_KEY});
 
+const systemInstructionInput = document.getElementById('system-instruction-input') as HTMLTextAreaElement;
 const promptInput = document.getElementById('prompt-input') as HTMLTextAreaElement;
 const generateBtn = document.getElementById('generate-btn') as HTMLButtonElement;
 const outputDiv = document.getElementById('output') as HTMLDivElement;
@@ -22,6 +23,7 @@ async function generateContent() {
   loader.classList.remove('hidden');
   outputDiv.innerHTML = '';
 
+  const systemInstruction = systemInstructionInput.value;
   const prompt = promptInput.value;
 
   try {
@@ -29,7 +31,7 @@ async function generateContent() {
       model: 'gemini-2.5-flash',
       contents: prompt,
       config: {
-        systemInstruction: 'You are a helpful assistant.',
+        systemInstruction: systemInstruction,
       }
     });
 
