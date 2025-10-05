@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "marked": "^15.0.8",
-    "@google/genai": "latest"
+    "@google/genai": "latest",
+    "highlight.js": "^11.9.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

@@ -4,11 +4,13 @@
     <title>Gemini AI Assistant</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     <script type="importmap">
       {
         "imports": {
           "marked": "https://esm.sh/marked@^15.0.8",
-          "@google/genai": "https://esm.run/@google/genai"
+          "@google/genai": "https://esm.run/@google/genai",
+          "highlight.js": "https://esm.sh/highlight.js@^11.9.0"
         }
       }
     </script>
@@ -25,6 +27,25 @@
         <label for="prompt-input">Enter your prompt:</label>
         <textarea id="prompt-input" rows="5" aria-label="Prompt input">Explain to me how AI works</textarea>
       </div>
+
+      <details class="settings-panel">
+        <summary>Advanced Settings</summary>
+        <div class="settings-content">
+          <div class="setting">
+            <label for="temperature-slider">Temperature: <span id="temperature-value">0.9</span></label>
+            <input type="range" id="temperature-slider" min="0" max="1" step="0.1" value="0.9" aria-label="Temperature control">
+          </div>
+          <div class="setting">
+            <label for="top-p-slider">Top-P: <span id="top-p-value">0.95</span></label>
+            <input type="range" id="top-p-slider" min="0" max="1" step="0.05" value="0.95" aria-label="Top-P control">
+          </div>
+          <div class="setting">
+            <label for="top-k-slider">Top-K: <span id="top-k-value">64</span></label>
+            <input type="range" id="top-k-slider" min="1" max="128" step="1" value="64" aria-label="Top-K control">
+          </div>
+        </div>
+      </details>
+
       <button id="generate-btn">Generate</button>
       <div id="loader" class="loader hidden" role="status" aria-live="polite"></div>
       <div id="output"></div>
