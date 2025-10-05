@@ -25,7 +25,19 @@ body {
 h1 {
   text-align: center;
   color: #4285f4; /* A brighter blue for better contrast */
+  margin-bottom: 1rem;
+}
+
+.model-display {
+  text-align: center;
+  margin-top: 0;
   margin-bottom: 2rem;
+  color: #aaa;
+}
+
+.model-display strong {
+  color: #e0e0e0;
+  font-weight: 500;
 }
 
 .form-group {

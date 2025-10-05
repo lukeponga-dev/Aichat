@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Gemini Model Selector</title>
+    <title>Gemini AI Assistant</title>
     <link rel="stylesheet" href="index.css">
     <script type="importmap">
       {
         "imports": {
           "marked": "https://esm.sh/marked@^15.0.8",
-          "openai": "https://esm.sh/openai@^4.94.0"
+          "@google/genai": "https://esm.run/@google/genai"
         }
       }
     </script>
   </head>
   <body>
     <div class="container">
-      <h1>Gemini Model Selector</h1>
-      <div class="form-group">
-        <label for="model-select">Choose a model:</label>
-        <select id="model-select" aria-label="Select a Gemini model">
-          <option value="models/gemini-2.5-flash" selected>gemini-2.5-flash</option>
-          <!-- Per your request, other models like 'gemini-1.5-pro' can be added here once available for this API -->
-        </select>
-      </div>
+      <h1>Gemini AI Assistant</h1>
+      <p class="model-display">Model: <strong>gemini-2.5-flash</strong></p>
       <div class="form-group">
         <label for="prompt-input">Enter your prompt:</label>
         <textarea id="prompt-input" rows="5" aria-label="Prompt input">Explain to me how AI works</textarea>

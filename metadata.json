@@ -1,5 +1,5 @@
 {
-  "name": "OpenAI SDK compatibility",
-  "description": "Access Gemini models with the OpenAI SDK",
+  "name": "Gemini AI Assistant",
+  "description": "An assistant powered by the Gemini gemini-2.5-flash model.",
   "requestFramePermissions": []
 }
